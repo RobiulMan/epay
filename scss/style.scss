@@ -16,18 +16,21 @@ body {
   height: 100vh;
   top: 0;
   right: 0;
-  background-image: url(/images/bg.png);
-  z-index: -111;
-  // background-position: center center;
-  // background-size: cover;
-  // background-repeat: none;
+  // background-image: url(images/bg.png);
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-position: center;
+  z-index: -11;
 }
+
 .continer {
-  max-width: 1175px;
-  margin: 0 auto;
+  // max-width: 1190px;
+  // min-width: ;
+  margin: 0 72px;
 }
 
 header {
+  margin: 20px auto;
   .epay-head {
     display: flex;
     justify-content: space-between;
@@ -39,21 +42,147 @@ header {
     }
   }
 }
+
+//main content
 main {
-  & {
-    .epay-content-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  // .epay-content {
+  //   width: 50%;
+  // }
+  // .epay-form {
+  //   width: 50%;
+  // }
+}
+
+.epay-content {
+  // width: 100%;
+
+  .epay-content-header {
+    // width: 50vw;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    .epay-header-text {
       display: flex;
-
-      .epay-header-text {
-        .main-title {
-          display: flex;
-          align-items: center;
-
-          h1 {
-            // font-size: 5em;
-          }
+      flex-direction: column;
+      .main-title {
+        display: flex;
+        align-items: center;
+        .tite-images {
+          width: 25%;
+          margin-top: 2.5em;
         }
+        h1 {
+          background: linear-gradient(
+            48deg,
+            rgba(146, 84, 213, 1) 0%,
+            rgba(69, 2, 151, 1) 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          // font-size: 8em;
+          font-size: 120px;
+          line-height: normal;
+        }
+      }
+
+      h4 {
+        text-transform: uppercase;
+        font-size: 2em;
+        font-family: "Raleway";
+        font-weight: 500;
+        color: rgb(107, 107, 107);
       }
     }
   }
+}
+
+.epay-header-body-content {
+  margin-top: 3em;
+  .epay-card-b {
+    position: absolute;
+    transform: translate(-15%, 0);
+    z-index: 11;
+    img {
+      transform: rotate(-35deg);
+      width: 60%;
+      // background: linear-gradient(
+      //    0deg,
+      //    rgba(255, 255, 255, 0.4) 0%,
+      //    rgba(207, 207, 207, 0) 100%
+      //  );
+      // background: rgba(255, 255, 255, 0.342);
+      backdrop-filter: blur(3px);
+      border-radius: 20px;
+    }
+  }
+  .epay-phone {
+    position: relative;
+    width: 100%;
+  }
+  .epay-card-f {
+    position: absolute;
+    transform: translate(20%, -136%);
+    z-index: 11;
+    img {
+      transform: rotate(-35deg);
+      width: 60%;
+      // background: linear-gradient(
+      //   0deg,
+      //   rgba(255, 255, 255, 0.4) 0%,
+      //   rgba(207, 207, 207, 0) 100%
+      // );
+      // background: rgba(255, 255, 255, 0.342);
+      backdrop-filter: blur(2px);
+      border-radius: 20px;
+    }
+  }
+
+  .epay-boll-top {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    transform: translate(-42%, -350%);
+    z-index: 111;
+    img {
+      width: 80%;
+    }
+  }
+  .epay-boll-bottom {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    transform: translate(148%, -152%);
+    z-index: -111;
+    img {
+      width: 80%;
+    }
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  background: hsla(0, 0%, 90%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 90%, 0.2) 0%,
+    hsla(0, 0%, 60%, 0.2) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(0, 0%, 90%, 0.2) 0%,
+    hsla(0, 0%, 60%, 0.2) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(0, 0%, 90%, 0.2) 0%,
+    hsla(0, 0%, 60%, 0.2) 100%
+  );
 }
