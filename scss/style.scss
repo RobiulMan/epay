@@ -4,6 +4,8 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 0;
+
   box-sizing: border-box;
   background-attachment: fixed;
   font-family: "Roboto", "Raleway", sans-serif;
@@ -16,6 +18,7 @@ body {
   height: 100vh;
   top: 0;
   right: 0;
+  overflow: hidden;
   // background-image: url(images/bg.png);
   // background-repeat: no-repeat;
   // background-attachment: fixed;
@@ -43,36 +46,44 @@ header {
   }
 }
 
-//main content
-main {
+//main continer
+.mainarea {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  // .epay-content {
-  //   width: 50%;
-  // }
-  // .epay-form {
-  //   width: 50%;
-  // }
+  // align-items: center;
+  justify-content: center;
+
+  .epay-content {
+    flex: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .epay-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .epay-content {
-  // width: 100%;
-
   .epay-content-header {
-    // width: 50vw;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .epay-header-text {
       display: flex;
+      align-items: center;
       flex-direction: column;
       .main-title {
         display: flex;
-        align-items: center;
+        justify-content: center;
         .tite-images {
           width: 25%;
-          margin-top: 2.5em;
         }
         h1 {
           background: linear-gradient(
@@ -83,14 +94,14 @@ main {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           // font-size: 8em;
-          font-size: 120px;
+          font-size: 56px;
           line-height: normal;
         }
       }
 
       h4 {
         text-transform: uppercase;
-        font-size: 2em;
+        font-size: 1em;
         font-family: "Raleway";
         font-weight: 500;
         color: rgb(107, 107, 107);
@@ -103,11 +114,11 @@ main {
   margin-top: 3em;
   .epay-card-b {
     position: absolute;
-    transform: translate(-15%, 0);
+    transform: translate(-19%, 0);
     z-index: 11;
     img {
-      transform: rotate(-35deg);
-      width: 60%;
+      transform: rotate(-25deg);
+      width: 50%;
       // background: linear-gradient(
       //    0deg,
       //    rgba(255, 255, 255, 0.4) 0%,
@@ -120,22 +131,22 @@ main {
   }
   .epay-phone {
     position: relative;
-    width: 100%;
+    width: 80%;
   }
   .epay-card-f {
     position: absolute;
-    transform: translate(20%, -136%);
+    transform: translate(15%, -127%);
     z-index: 11;
     img {
-      transform: rotate(-35deg);
-      width: 60%;
+      transform: rotate(-25deg);
+      width: 50%;
       // background: linear-gradient(
       //   0deg,
       //   rgba(255, 255, 255, 0.4) 0%,
       //   rgba(207, 207, 207, 0) 100%
       // );
       // background: rgba(255, 255, 255, 0.342);
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(3px);
       border-radius: 20px;
     }
   }
@@ -147,7 +158,7 @@ main {
     transform: translate(-42%, -350%);
     z-index: 111;
     img {
-      width: 80%;
+      width: 70%;
     }
   }
   .epay-boll-bottom {
@@ -157,32 +168,63 @@ main {
     transform: translate(148%, -152%);
     z-index: -111;
     img {
-      width: 80%;
+      width: 70%;
     }
   }
 }
+.epay-form {
+  color: #ffffff;
+}
+.form-continer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5em;
+  background: linear-gradient(
+    180deg,
+    rgba(219, 215, 215, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
 
+  // border: 0.3px solid
+  //   linear-gradient(
+  //     180deg,
+  //     rgba(219, 215, 215, 0.2) 0%,
+  //     rgba(255, 255, 255, 0.2) 100%
+  //   );
+  box-sizing: border-box;
+  backdrop-filter: blur(20px);
+}
 form {
   display: flex;
   flex-direction: column;
-  padding: 1.5em;
-  background: hsla(0, 0%, 90%, 1);
-
-  background: linear-gradient(
-    90deg,
-    hsla(0, 0%, 90%, 0.2) 0%,
-    hsla(0, 0%, 60%, 0.2) 100%
-  );
-
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(0, 0%, 90%, 0.2) 0%,
-    hsla(0, 0%, 60%, 0.2) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(0, 0%, 90%, 0.2) 0%,
-    hsla(0, 0%, 60%, 0.2) 100%
-  );
+  justify-content: center;
+  label input {
+    border: none;
+    background: linear-gradient(
+      180deg,
+      rgba(219, 215, 215, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    color: #ffffff;
+    padding: 0.5em;
+    &::placeholder {
+      color: rgba(255, 255, 255, 1);
+      font-family: "Raleway";
+      font-weight: 300;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  .check-box {
+    display: flex;
+    justify-content: start;
+    .check-text {
+      font-size: 12px;
+    }
+  }
 }
