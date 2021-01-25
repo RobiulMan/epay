@@ -75,6 +75,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .epay-header-text {
       display: flex;
       align-items: center;
@@ -112,66 +113,77 @@ header {
 
 .epay-header-body-content {
   margin-top: 3em;
-  .epay-card-b {
+  .card-back {
+    animation: card-back 4s infinite;
+    display: flex;
     position: absolute;
-    transform: translate(-19%, 0);
-    z-index: 11;
-    img {
-      transform: rotate(-25deg);
-      width: 50%;
-      // background: linear-gradient(
-      //    0deg,
-      //    rgba(255, 255, 255, 0.4) 0%,
-      //    rgba(207, 207, 207, 0) 100%
-      //  );
-      // background: rgba(255, 255, 255, 0.342);
-      backdrop-filter: blur(3px);
-      border-radius: 20px;
+    transform: translate(-14%, 0);
+    z-index: 111;
+    .epay-card-b {
+      flex: 1;
+      img {
+        width: 50%;
+        transform: rotate(-25deg);
+        // width: 50%;
+        // background: linear-gradient(
+        //    0deg,
+        //    rgba(255, 255, 255, 0.4) 0%,
+        //    rgba(207, 207, 207, 0) 100%
+        //  );
+        // background: rgba(255, 255, 255, 0.342);
+        backdrop-filter: blur(3px);
+        border-radius: 20px;
+      }
+    }
+    .epay-boll-top {
+      flex: 1;
+      position: absolute;
+      transform: translate(10px, 10px);
+      // z-index: 111;
+      img {
+        width: 70%;
+      }
     }
   }
   .epay-phone {
     position: relative;
     width: 80%;
   }
-  .epay-card-f {
+  .card-front {
+    // animation-name: mymove;
+    // animation-duration: 4s ;
+    animation: card-front 4s infinite;
+    display: flex;
     position: absolute;
-    transform: translate(15%, -127%);
-    z-index: 11;
-    img {
-      transform: rotate(-25deg);
-      width: 50%;
-      // background: linear-gradient(
-      //   0deg,
-      //   rgba(255, 255, 255, 0.4) 0%,
-      //   rgba(207, 207, 207, 0) 100%
-      // );
-      // background: rgba(255, 255, 255, 0.342);
-      backdrop-filter: blur(3px);
-      border-radius: 20px;
+    transform: translate(16%, -127%);
+    .epay-card-f {
+      z-index: 11;
+      flex: 1;
+      img {
+        width: 50%;
+        transform: rotate(-25deg);
+        // background: linear-gradient(
+        //   0deg,
+        //   rgba(255, 255, 255, 0.4) 0%,
+        //   rgba(207, 207, 207, 0) 100%
+        // );
+        // background: rgba(255, 255, 255, 0.342);
+        backdrop-filter: blur(3px);
+        border-radius: 20px;
+      }
     }
-  }
+    .epay-boll-bottom {
+      flex: 1;
+      position: absolute;
+      transform: translate(77%, 27%);
 
-  .epay-boll-top {
-    position: absolute;
-    /* top: 0; */
-    /* left: 0; */
-    transform: translate(-42%, -350%);
-    z-index: 111;
-    img {
-      width: 70%;
-    }
-  }
-  .epay-boll-bottom {
-    position: absolute;
-    /* top: 0; */
-    /* left: 0; */
-    transform: translate(148%, -152%);
-    z-index: -111;
-    img {
-      width: 70%;
+      img {
+        width: 70%;
+      }
     }
   }
 }
+
 .epay-form {
   color: #ffffff;
 }
@@ -226,5 +238,36 @@ form {
     .check-text {
       font-size: 12px;
     }
+  }
+}
+
+//animation
+@keyframes card-front {
+  0% {
+    transform: translate(16%, -127%);
+  }
+  50% {
+    transform: translate(16%, -136%);
+  }
+  80% {
+    transform: translate(16%, -144%);
+  }
+  100% {
+    transform: translate(16%, -127%);
+  }
+}
+
+@keyframes card-back {
+  0% {
+    transform: translate(-14%, 0%);
+  }
+  50% {
+    transform: translate(-14%, 10%);
+  }
+  80% {
+    transform: translate(-14%, 15%);
+  }
+  100% {
+    transform: translate(-14%, 0%);
   }
 }
