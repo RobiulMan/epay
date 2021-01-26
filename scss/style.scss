@@ -33,7 +33,7 @@ body {
 }
 
 header {
-  margin: 20px auto;
+  margin: 10px auto;
   .epay-head {
     display: flex;
     justify-content: space-between;
@@ -184,26 +184,30 @@ main {
 }
 .form-ball-top {
   position: absolute;
-  transform: translate(-18%, -27%);
+  transform: translate(0%, -27%);
+  img {
+    width: 80%;
+  }
 }
 .epay-form {
   color: #ffffff;
   .form-title {
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
     text-align: center;
     font-family: "Raleway";
+
     h2 {
-      font-size: 3em;
+      font-size: 2em;
       line-height: 1;
     }
     p {
-      font-size: 1.5em;
+      font-size: 1em;
       font-weight: 500;
     }
   }
 }
 .form-continer {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -231,12 +235,11 @@ form {
   justify-content: center;
   width: 100%;
   .sginup-title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1em;
+    margin: 0 auto 0.5em auto;
+
     h2 {
       font-family: "Raleway";
-      font-size: 2.5em;
+      font-size: 1.5em;
       font-weight: 500;
     }
   }
@@ -286,9 +289,6 @@ form {
     .icon-pass {
       position: absolute;
       transform: translate(10px, 10px);
-      img {
-        opacity: 0.5;
-      }
     }
   }
 
@@ -301,7 +301,6 @@ form {
     justify-content: start;
     margin-bottom: 1em;
     input[type="checkbox"] {
-      border: none;
       &:focus {
         outline: none;
         background-color: #fff;
@@ -317,12 +316,10 @@ form {
   .acount-btn {
     cursor: pointer;
     border: none;
-    padding: 0.5em;
-    width: 75%;
+    padding: 0.3em;
+    width: 65%;
     margin: 0 auto;
     color: #ffffff;
-    // font-weight: 500;
-    font-size: 1.1em;
     background: linear-gradient(
         0deg,
         rgba(255, 255, 255, 0.2),
@@ -332,14 +329,23 @@ form {
     border-radius: 30px;
   }
 }
-hr {
-  width: 80%;
-  margin: 20px 0;
+.or {
+  // margin: 10px;
+  padding: 5px;
   &::after {
-    content: "or";
+    content: "";
     position: absolute;
-    transform: translate(130px, -12px);
-    background: transparent;
+    transform: translate(10px, 10px);
+    border-top: 1px solid white;
+
+    width: 20%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    transform: translate(-75px, 10px);
+    border-top: 1px solid white;
+    width: 20%;
   }
 }
 .social-btn {
@@ -347,7 +353,7 @@ hr {
   margin: 0 auto;
   & > div {
     cursor: pointer;
-    padding: 0.222em;
+    padding: 3px;
     background-color: rgba(255, 255, 255, 0.199);
     border-radius: 100px;
     margin: 0 auto;
@@ -363,9 +369,9 @@ hr {
 .from-end-content {
   color: #fff;
   margin-top: 10px;
-  p {
+  span {
+    font-size: 0.88em;
     cursor: pointer;
-    font-size: 1em;
     font-weight: 100;
     font-family: "Roboto";
     // text-decoration: none;
@@ -378,7 +384,10 @@ hr {
 .form-ball-bottom {
   margin: 0 auto;
   position: absolute;
-  transform: translate(240%, -88%);
+  transform: translate(240%, -102%);
+  img {
+    width: 80%;
+  }
 }
 //animation
 @keyframes card-front {
