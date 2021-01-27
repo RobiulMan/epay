@@ -299,6 +299,7 @@ form {
   .check-box {
     display: flex;
     justify-content: start;
+    flex-direction: row;
     margin-bottom: 1em;
     input[type="checkbox"] {
       &:focus {
@@ -337,7 +338,6 @@ form {
     position: absolute;
     transform: translate(10px, 10px);
     border-top: 1px solid white;
-
     width: 20%;
   }
   &::before {
