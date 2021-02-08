@@ -9,8 +9,6 @@ body {
   box-sizing: border-box;
   background-attachment: fixed;
   font-family: "Roboto", "Raleway", sans-serif;
-  // width: 100vw;
-  // height: 100vh;
 }
 .bgs {
   position: absolute;
@@ -19,17 +17,11 @@ body {
   top: 0;
   right: 0;
   // overflow: hidden;
-  // background-image: url(images/bg.png);
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // background-position: center;
   z-index: -11;
 }
 
 .continer {
-  // max-width: 1190px;
-  // min-width: ;
-  margin: 0 72px;
+  margin: 0 32px;
 }
 
 header {
@@ -55,22 +47,25 @@ header {
 main {
   width: 100%;
   display: flex;
-  // align-items: center;
   justify-content: center;
 
   .epay-content {
+    // flex: 1;
+    // flex: 1;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
     flex: 1;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
   }
 
   .epay-form {
+    // flex: 1;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    margin: 0 auto;
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -99,7 +94,6 @@ main {
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          // font-size: 8em;
           font-size: 56px;
           line-height: normal;
         }
@@ -119,7 +113,7 @@ main {
 .epay-header-body-content {
   margin-top: 3em;
   .card-back {
-    animation: card-back 4s infinite;
+    animation: card-back 3s infinite alternate-reverse;
     display: flex;
     position: absolute;
     transform: translate(-14%, 0);
@@ -129,13 +123,6 @@ main {
       img {
         width: 50%;
         transform: rotate(-25deg);
-        // width: 50%;
-        // background: linear-gradient(
-        //    0deg,
-        //    rgba(255, 255, 255, 0.4) 0%,
-        //    rgba(207, 207, 207, 0) 100%
-        //  );
-        // background: rgba(255, 255, 255, 0.342);
         backdrop-filter: blur(3px);
         border-radius: 20px;
       }
@@ -155,9 +142,7 @@ main {
     width: 80%;
   }
   .card-front {
-    // animation-name: mymove;
-    // animation-duration: 4s ;
-    animation: card-front 4s infinite;
+    animation: card-front 3s infinite alternate-reverse;
     display: flex;
     position: absolute;
     transform: translate(16%, -127%);
@@ -175,7 +160,6 @@ main {
       flex: 1;
       position: absolute;
       transform: translate(77%, 27%);
-
       img {
         width: 70%;
       }
@@ -184,12 +168,16 @@ main {
 }
 .form-ball-top {
   position: absolute;
-  transform: translate(0%, -27%);
+  transform: translate(-34%, -27%);
   img {
     width: 80%;
   }
 }
 .epay-form {
+  .form-area {
+    width: 65%;
+    margin: 0 auto;
+  }
   color: #ffffff;
   .form-title {
     margin: 0 auto 1em auto;
@@ -207,36 +195,19 @@ main {
   }
 }
 .form-continer {
-  width: 70%;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1.5em;
+  text-align: center;
+  padding: 1.8em;
   background: linear-gradient(
     180deg,
-    rgba(219, 215, 215, 0.2) 0%,
-    rgba(255, 255, 255, 0.2) 100%
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 50%
   );
-
-  // border: 0.3px solid
-  //   linear-gradient(
-  //     180deg,
-  //     rgba(219, 215, 215, 0.2) 0%,
-  //     rgba(255, 255, 255, 0.2) 100%
-  //   );
-  box-sizing: border-box;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
 }
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
   .sginup-title {
     margin: 0 auto 0.5em auto;
-
     h2 {
       font-family: "Raleway";
       font-size: 1.5em;
@@ -244,7 +215,7 @@ form {
     }
   }
 
-  div {
+  & > div {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -268,24 +239,18 @@ form {
     }
   }
   .user-filed {
-    .users {
-    }
     .icons-user {
       position: absolute;
       transform: translate(10px, 10px);
     }
   }
   .mail-file {
-    .mails {
-    }
     .icon-mail {
       position: absolute;
       transform: translate(10px, 10px);
     }
   }
   .pass-file {
-    .lock {
-    }
     .icon-pass {
       position: absolute;
       transform: translate(10px, 10px);
@@ -308,6 +273,7 @@ form {
       }
     }
     .check-text {
+      text-align: left;
       font-size: 12px;
       font-weight: 300;
       margin-left: 0.5em;
@@ -331,7 +297,6 @@ form {
   }
 }
 .or {
-  // margin: 10px;
   padding: 5px;
   &::after {
     content: "";
@@ -343,13 +308,14 @@ form {
   &::before {
     content: "";
     position: absolute;
-    transform: translate(-75px, 10px);
+    transform: translate(-90px, 10px);
     border-top: 1px solid white;
     width: 20%;
   }
 }
 .social-btn {
   display: flex;
+  width: 50%;
   margin: 0 auto;
   & > div {
     cursor: pointer;
@@ -357,13 +323,14 @@ form {
     background-color: rgba(255, 255, 255, 0.199);
     border-radius: 100px;
     margin: 0 auto;
+    width: 30%;
+    & > img {
+      width: 100%;
+    }
   }
-  .google {
-  }
+
   .facebook {
     margin: 0 20px;
-  }
-  .apple {
   }
 }
 .from-end-content {
@@ -374,7 +341,6 @@ form {
     cursor: pointer;
     font-weight: 100;
     font-family: "Roboto";
-    // text-decoration: none;
   }
   &:hover {
     text-decoration: underlin;
@@ -384,7 +350,7 @@ form {
 .form-ball-bottom {
   margin: 0 auto;
   position: absolute;
-  transform: translate(240%, -102%);
+  transform: translate(209%, -102%);
   img {
     width: 80%;
   }
@@ -392,31 +358,21 @@ form {
 
 //animation hero area
 @keyframes card-front {
-  0% {
+  from {
     transform: translate(16%, -127%);
   }
-  50% {
-    transform: translate(16%, -136%);
-  }
-  80% {
-    transform: translate(16%, -144%);
-  }
-  100% {
-    transform: translate(16%, -127%);
+
+  to {
+    transform: translate(16%, -183px);
   }
 }
 
 @keyframes card-back {
-  0% {
-    transform: translate(-14%, 0%);
+  from {
+    transform: translate(-14%, 0px);
   }
-  50% {
-    transform: translate(-14%, 10%);
-  }
-  80% {
-    transform: translate(-14%, 15%);
-  }
-  100% {
-    transform: translate(-14%, 0%);
+
+  to {
+    transform: translate(-14%, 30px);
   }
 }
